@@ -1,41 +1,17 @@
-# Website
+# Betaflight Documentation Revamp Project
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This standalone repository contains a work in progress to update the existing Betaflight documentation using Docusaurus V3.8 with Typescript.
+The current Betaflight website is built using Docusaurus V2, which is no longer supported and has security issues that are addressed in V3. 
+Once all the docs have been transferred to V3, I will fork the betaflight.com repository and submit a pull request.
 
-## Installation
 
-```bash
-yarn
-```
+Additionally, as the Betaflight project continues to grow, gaining more features such as position hold and rudimentary fixed wing support, there is a need to refactor and reorganize the documentation to take better advantage of Docusaurus's features such as versioning and reactive images. 
 
-## Local Development
+To run the docs locally, install npm on your system and open a terminal in this project's root.
+Then, do the following:
 
-```bash
-yarn start
-```
+1. Prepare the environment: `npm run clear` followed by `rm package-lock.json`
+2. Install packages: `npm install`
+3. Run dev server: `npm run start`
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The current temporary docs can be viewed here: https://www.spiffygoose.com/betaflightdocs/

@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'Betaflight',
+  tagline: 'Pushing the Limits of UAV Performance',
+  favicon: 'img/betaflight/icon_light.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -37,16 +37,34 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [require.resolve("docusaurus-lunr-search"),
+    require.resolve("docusaurus-plugin-image-zoom")
+  ],
+
+  // enable mermaid diagrams
+  themes: ['@docusaurus/theme-mermaid'],
+  markdown: {
+    mermaid: true,
+  },
+
   presets: [
     [
       'classic',
       {
         docs: {
+          includeCurrentVersion: true,
+          lastVersion: 'current',
+          versions : {
+            current : {
+              label: "4.5.2",
+              banner: 'none'
+            }
+          },
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/robotgoat/betaflightdocs/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -57,7 +75,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/robotgoat/betaflightdocs/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -71,38 +89,64 @@ const config: Config = {
   ],
 
   themeConfig: {
+
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
+    // docusaurus image zoom plugin
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)'
+      },
+    },
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Betaflight',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Betaflight Logo',
+        src: 'img/betaflight/icon_light.svg',
+        srcDark: 'img/betaflight/icon_dark.svg'
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'documentationSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Docs',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          type: "docsVersionDropdown",
+          position: "right",
+          dropdownActiveClassDisabled: true
+        },
+        {
+          href: 'https://github.com/betaflight/betaflight',
           label: 'GitHub',
           position: 'right',
         },
       ],
     },
+    docs: {
+      versionPersistence: 'localStorage',
+      sidebar : {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
     footer: {
-      style: 'dark',
+      // style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Youtube',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Joshua Bardwell',
+              href: 'https://www.youtube.com/channel/UCX3eufnI7A2I7IkKHZn8KSQ',
+              footerIcon: 'youtube'
             },
           ],
         },
