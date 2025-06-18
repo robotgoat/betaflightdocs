@@ -17,6 +17,8 @@
   --ifm-background-color: #fff;
 
   --ifm-footer-background-color: #7373730d;
+  --ifm-footer-title-color: #1c1e21;
+  --ifm-footer-link-color: #1c1e21;
 
 
   /* --ifm-color-primary: #2e8555;
@@ -41,6 +43,11 @@
   --ifm-color-primary-lightest: #4fddbf; */
 
   --ifm-footer-background-color: #1c1e21;
+
+  --ifm-footer-title-color: #ffbb00;
+  --ifm-footer-link-color: #ffbb00;
+  --ifm-footer-color: #ffbb00;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --ifm-background-color: #18181b;
 }

@@ -102,7 +102,7 @@ const config: Config = {
       },
     },
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/betaflight/betaflight_socialcard.jpg',
     navbar: {
       title: 'Betaflight',
       logo: {
@@ -116,6 +116,12 @@ const config: Config = {
           sidebarId: 'documentationSidebar',
           position: 'left',
           label: 'Docs',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'devdocsSidebar',
+          position: 'left',
+          label: 'Development',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -139,6 +145,11 @@ const config: Config = {
     },
     footer: {
       // style: 'dark',
+      logo: {
+        src: 'img/betaflight/icon_light.svg',
+        srcDark: 'img/betaflight/icon_dark.svg',
+        height: 144,
+      },
       links: [
         {
           title: 'Youtube',
@@ -146,7 +157,23 @@ const config: Config = {
             {
               label: 'Joshua Bardwell',
               href: 'https://www.youtube.com/channel/UCX3eufnI7A2I7IkKHZn8KSQ',
-              footerIcon: 'youtube'
+            },
+            {
+              label: 'Ivan Efimov',
+              href: 'https://www.youtube.com/channel/UCQtdpSBYlsWH6_m1Us_d8dg',
+            },
+          ],
+        },
+        {
+          title: 'Links',
+          items: [
+            {
+              label: 'Oscar Liang',
+              href: 'https://oscarliang.com/',
+            },
+            {
+              label: 'VitroidFPV',
+              href: 'https://www.vitroidfpv.com/',
             },
           ],
         },
@@ -154,16 +181,12 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.betaflight.com/invite',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'IntoFPV',
+              href: 'https://intofpv.com/',
             },
           ],
         },
@@ -176,12 +199,12 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/betaflight/betaflight',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} All rights reserved Team Betaflight`,
     },
     prism: {
       theme: prismThemes.github,
