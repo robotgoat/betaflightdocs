@@ -57,7 +57,8 @@ const config: Config = {
           versions : {
             current : {
               label: "4.5.2",
-              banner: 'none'
+              banner: 'none',
+              badge: true,
             }
           },
           sidebarPath: './sidebars.ts',
