@@ -43,7 +43,7 @@ If you want to contribute financially on an ongoing basis, you should consider b
 This document is primarily for developers.
 
 Contribution of bugfixes and new features is encouraged. Please be aware that we have a thorough review process for pull requests, and be prepared to explain what you want to achieve with your pull request.
-Before starting to write code, please read this document and the [coding style definition](development/CodingStyle).
+Before starting to write code, please read this document and the (link here) coding style definition.
 
 GitHub actions are used to run automatic builds
 
